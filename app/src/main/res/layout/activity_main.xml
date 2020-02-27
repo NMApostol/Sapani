@@ -7,12 +7,56 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_wundegr"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/et_korrelation"
+        app:layout_constraintEnd_toStartOf="@+id/bt_berechnen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dd_patienten" />
+
+    <Button
+        android:id="@+id/bt_berechnen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginEnd="162dp"
+        android:layout_marginRight="162dp"
+        android:layout_marginBottom="8dp"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/et_korrelation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_wundegr" />
 
+    <EditText
+        android:id="@+id/et_korrelation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="484dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_wundegr"
+        app:layout_constraintTop_toBottomOf="@+id/tv_wundegr" />
+
+    <Spinner
+        android:id="@+id/dd_patienten"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="43dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_wundegr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

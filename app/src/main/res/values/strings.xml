@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Sapani</string>
+    <string name="selected_item">Selected item:</string>
+
+    <string-array name="Patienten">
+        <item>Paulus Urtzus</item>
+        <item>Siggi Stolz</item>
+        <item>Patrick Rossmann Roessler</item>
+    </string-array>
 </resources>
