@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/TextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -20,6 +21,7 @@
         app:layout_constraintVertical_bias="0.093" />
 
     <TextView
+        android:id="@+id/TextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -33,6 +35,7 @@
         app:layout_constraintVertical_bias="0.305" />
 
     <TextView
+        android:id="@+id/TextView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -46,6 +49,7 @@
         app:layout_constraintVertical_bias="0.586" />
 
     <TextView
+        android:id="@+id/TextView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -59,7 +63,7 @@
         app:layout_constraintVertical_bias="0.536" />
 
     <Button
-        android:id="@+id/simpleButton"
+        android:id="@+id/simpleButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Speichern"
