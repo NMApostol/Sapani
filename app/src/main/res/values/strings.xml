@@ -1,9 +1,8 @@
 <resources>
     <string name="app_name">Sapani</string>
-    <string name="selected_item">Ausgewählter Patient:</string>
+    <string name="selected_item">Selected item:</string>
 
     <string-array name="Patienten">
-        <item>Auswählen...</item>
         <item>Paulus Urtzus</item>
         <item>Siggi Stolz</item>
         <item>Patrick Rossmann Roessler</item>
