@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
         val spinner = findViewById<Spinner>(R.id.dd_patienten)
         val button = findViewById<Button>(R.id.simpleButton1)
         val wundGroese = findViewById<EditText>(R.id.editText1)
-        val wunden = mutableListOf<Number>()
         val prozentAusgabe = findViewById<TextView>(R.id.TextView3)
 
         if (spinner != null) {
