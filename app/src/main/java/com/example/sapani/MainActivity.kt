@@ -39,25 +39,32 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        var ersteWunde: Double = 0.0
+        var zweiteWunde: Double = 0.0
+        var wundenAnzahl = 0
         button.setOnClickListener {
             if (spinner.selectedItem != patienten[0]) {
                 var wund = wundGroese.getText().toString()
                 if (wund != "") {
                     var eingabe = wundGroese.getText().toString().toDouble()
-                    println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" + wunden.size)
-                    if (wunden.size == 0) { wunden.add(0, eingabe) }
-                    else if (wunden.size == 1) { wunden.add(1, eingabe) }
-                    else if (wunden.size == 2) {
-                        var wunde = wunden[1]
-                        wunden[0] = wunde
-                        wunden[1] = eingabe
+                    if (wundenAnzahl == 0) {
+                        ersteWunde = eingabe
+                        wundenAnzahl++
                     }
-                    if (wunden.size == 2) {
-                        var prozent = ((wunden[1].toDouble().div(wunden[0].toDouble())) * 100)
+                    else if (wundenAnzahl == 1) {
+                        zweiteWunde = eingabe
+                        wundenAnzahl++
+                    }
+                    else if (wundenAnzahl == 2) {
+                        var wunde = zweiteWunde
+                        ersteWunde = wunde
+                        zweiteWunde = eingabe
+                    }
+                    if (wundenAnzahl == 2) {
+                        var rechner = Rechner(ersteWunde, zweiteWunde)
+                        var prozent = rechner.prozent()
                         prozentAusgabe.setText(prozent.toString() + "%")
-                        println("------------------------------------------------------------------------- " + wunden[0] + " | " + wunden[1] + " | " + prozent)
                     }
-                    println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" + wunden.size)
                     wundGroese.setText(null)
                     Toast.makeText(this@MainActivity, "Wundgröße wurde gespeichert.", Toast.LENGTH_SHORT).show()
                 } else {
